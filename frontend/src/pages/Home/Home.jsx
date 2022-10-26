@@ -28,7 +28,7 @@ const Home = () => {
 
     </p>
     <div>
-       <Button onClick={()=> startRegister('/register')} text="Get your username ➡️" />
+       <Button onClick={()=> startRegister('/authenticate')} text="Get your username ➡️" />
     </div>
     <div className={styles.signin}>
           <span className={styles.hasInvite}>Have an invite text?</span>
