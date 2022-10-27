@@ -28,10 +28,11 @@ const Home = () => {
 
     </p>
     <div>
-       <Button onClick={()=> startRegister('/authenticate')} text="Get your username ➡️" />
+       <Button onClick={()=> startRegister('/authenticate')} text="Let's Go ➡️" />
     </div>
     <div className={styles.signin}>
           <span className={styles.hasInvite}>Have an invite text?</span>
+
           <Link style={signInLink} to="/login">Sign in</Link>
     </div>
     </Card>
