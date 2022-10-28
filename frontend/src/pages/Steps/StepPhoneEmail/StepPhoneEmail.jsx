@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import Phone from './Phone/Phone';
-import Email from './Email/Email'
+import Email from './Email/Email';
+import styles from './StepPhoneEmail.module.css'
+import { BsPhone } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
+
 const phoneEmailMap = {
     phone: Phone,
     email: Email
@@ -16,9 +20,20 @@ const StepPhoneEmail = ({onNext}) => {
  }
   return (
     <>
-    <button onClick ={() => setType('phone')}>Phone</button>
-    <button onClick= {() => setType('email')}>Email</button>
-    <Component onNext = {onNext} />
+
+    <div className={styles.cardWrapper}>
+       <div>
+       <div className={styles.buttonWrap}>
+        <button className={`${styles.tabButton} ${type === 'phone' ? styles.active : ''}`} onClick ={() => setType('phone')}>
+          <BsPhone />
+        </button>
+        <button className={`${styles.tabButton} ${type === 'email' ? styles.active : ''}`} onClick= {() => setType('email')}>
+          <MdOutlineEmail />
+        </button>
+        </div>
+      <Component onNext = {onNext} />
+       </div>
+    </div>
     </>
   )
 }
