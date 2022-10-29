@@ -1,3 +1,8 @@
 1.SRS documentation :- notion
 2.Prototype - figma
 	->Color palate - behance
+
+------------BACKEND------------
+in controller folder ->
+All the business logic is written.
+As we are following MVC pattern

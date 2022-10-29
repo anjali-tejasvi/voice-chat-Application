@@ -6,7 +6,7 @@ import styles from '../StepPhoneEmail.module.css';
 
 
 
-const Email = () => {
+const Email = ({onNext}) => {
 
   const [email, setEmail] = useState('');
 
@@ -17,7 +17,7 @@ const Email = () => {
 
     <div>
     <div className={styles.actionButtonWrap}>
-        <Button text="Next ➡️" />
+        <Button text="Next ➡️" onClick={onNext} />
         </div>
         <p className={styles.bottomParagraph}>
           By entring your number, you're agreeing to our 

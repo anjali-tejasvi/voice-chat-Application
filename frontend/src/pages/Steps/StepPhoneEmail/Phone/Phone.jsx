@@ -5,7 +5,7 @@ import TextInput from '../../../../components/shared/TextInput/TextInput';
 import { useState } from 'react';
 import styles from '../StepPhoneEmail.module.css';
 
-const Phone = () => {
+const Phone = ({onNext}) => {
 
   const [phoneNumber, setPhoneNumber] = useState('');
 
@@ -14,7 +14,7 @@ const Phone = () => {
       <TextInput value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
       <div>
         <div className={styles.actionButtonWrap}>
-        <Button text="Next ➡️" />
+        <Button text="Next ➡️" onClick={onNext}/>
         </div>
         <p className={styles.bottomParagraph}>
           By entring your number, you're agreeing to our 
