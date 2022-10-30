@@ -6,3 +6,10 @@
 in controller folder ->
 All the business logic is written.
 As we are following MVC pattern
+
+to generate random number and hashing or verification
+there is a in-built module "crypto".
+crypto.randomInt(1000,9999)
+
+crypto.randomBytes(64).toString('hex')
+//to generate secreat key

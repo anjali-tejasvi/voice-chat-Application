@@ -1,6 +1,20 @@
+const otpService =  require('../services/otp-service')
+const hashService =  require('../services/hash-service')
+
 class AuthController {
-    sendOtp(req,res){
-        res.send("Hello from otp route")
+   async sendOtp(req,res){
+
+
+        const { phone } = req.body;
+        if(!phone){
+            res.status(400).json({message: 'Phone field is required! '})
+        }
+        const otp = await otpService.generateOtp();
+
+        //Hash
+        const hash =  hashService.hashOtp();
+
+        res.json({otp})
     }
 }
 
