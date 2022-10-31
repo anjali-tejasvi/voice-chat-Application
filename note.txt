@@ -13,3 +13,7 @@ crypto.randomInt(1000,9999)
 
 crypto.randomBytes(64).toString('hex')
 //to generate secreat key
+
+
+for sms sending a third party website is used 
+"TWILIO"
