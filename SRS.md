@@ -4,7 +4,7 @@
 
 - Registration
     - Registration should be done using the OTP system. This can be sent using the phone number or email address.
-    - Need to collect the following info when registering :
+    - Need to collect the following info when registering:
         - Full Name
         - Profile Picture
         - Create Username
